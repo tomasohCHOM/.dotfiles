@@ -1,5 +1,5 @@
+# oh-my-zsh
 export ZSH="$HOME/.oh-my-zsh"
-
 ZSH_THEME="robbyrussell"
 
 plugins=(
@@ -10,15 +10,12 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+[ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh"
 
+# some specifics
 autoload -Uz compinit
-
 export MANPAGER="nvim +Man!"
-export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
-export LDFLAGS="-L/opt/homebrew/opt/llvm/lib"
-export CPPFLAGS="-I/opt/homebrew/opt/llvm/include"
-export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
+
+# aliases
+alias vim="nvim"
 
